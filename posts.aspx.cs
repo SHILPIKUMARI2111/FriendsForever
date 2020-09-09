@@ -76,6 +76,8 @@ public partial class posts : System.Web.UI.Page
             }
         }
 
+        conn.Close();
+
     }
     protected void post_Click(object sender, EventArgs e)
     {

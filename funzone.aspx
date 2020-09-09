@@ -29,8 +29,8 @@
         <span class="funzone-title">Fun Zone !!!</span>
 
 				<div class="funzone-list">
-                    <a class="funzone-text" href="#">Facts</a>
-                    <a class="funzone-text" href="#">Jokes</a>
+                    <a class="funzone-text" href="facts.aspx">Facts</a>
+                    <a class="funzone-text" href="quotes.aspx">Quotes</a>
                     <a class="funzone-text" href="games.aspx">Games</a>
                 </div>
 

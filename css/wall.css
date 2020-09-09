@@ -163,10 +163,30 @@ iframe {
 
 .posts{
   display: block;
-  text-align: left;
+  width : 100%;
+  text-align: right;
+}
+
+.postsothers{
+  display: block;
+  width : 100%;
+  text-align: right;
+}
+
+.facts{
+  display: block;
+  width : 100%;
+  text-align: center;
 }
 
 #p-uname{
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: #00751d;
+}
+#p-unameothers{
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -181,6 +201,16 @@ iframe {
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
   color: #636363;
+}
+
+#fact-text{
+  font-size: 40px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: #6A2A1D;
+  text-shadow: 1px 1px #757575;
+  text-align: center;
 }
 
 
@@ -265,6 +295,18 @@ img {
   padding-bottom: 50px;
 }
 
+.headtitle {
+  font-family: Poppins-Bold;
+  font-size: 65px;
+  color: #00012e;
+
+  text-align: center;
+
+  width: 100%;
+  display: block;
+  padding-bottom: 50px;
+}
+
 .whatsonmind {
   font-family: Poppins-Regular;
   font-size: 30px;
@@ -299,6 +341,20 @@ img {
   border-radius: 5px;
   width: 100px;
   height: 40px;
+}
+#refreshbutton{
+  color: white;
+  text-align: center;
+  font-family: Poppins-Bold;
+  background-color: #0062ff;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  right:20px;
+}
+.refresh{
+    text-align:right;
+    margin-top : 30px;
 }
 input[type=text]
 {
