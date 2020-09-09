@@ -151,6 +151,12 @@ public partial class signup : System.Web.UI.Page
 
                                                 conn.Close();
 
+                                                if (ProPic.PostedFile.ContentType == "image/jpeg")
+                                                {
+                                                    string filename = u_name.Text + ".jpg";
+                                                    ProPic.SaveAs(@"C:\Users\shahin_saim\Documents\Visual Studio 2013\WebSites\FriendsForever\images\propics\" + filename);
+                                                }
+
                                                 Response.Write("<h3 style = 'color:green' >Account Created Successfully !!!</h3>");
 
                                                 Response.Redirect("home.aspx");

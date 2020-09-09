@@ -30,6 +30,13 @@
   width: -moz-calc((100% - 30px) / 2);
   width: calc((100% - 30px) / 2);
 }
+.col-3 {
+    width : 23%
+}
+
+.col-4 {
+  width: 40%;
+}
 
 @media (max-width: 767px) {
   .col-2 {

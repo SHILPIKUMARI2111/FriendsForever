@@ -21,13 +21,14 @@
 </head>
 <body>
 
+    <form id="form2" runat="server">
+
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Create Account</h2>
 
-                    <form id="form1" method="POST" action="signup.aspx" runat="server">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
@@ -107,11 +108,19 @@
                                 </div>
                             </div>
                         </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <label class="label">Profile Picture</label>
+                        </div>
+                        <div class="col-4">
+                            <asp:FileUpload ID="ProPic" runat="server" />
+                        </div>
+                    </div>
+
                         <div class="p-t-15">
                             <!--<input class="btn btn--radius-2 btn--blue" type="submit" name="createaccount" value="Create Account"></input>-->
                             <asp:Button class="btn btn--radius-2 btn--blue" ID="signupButton" runat="server" Text="Create Account" OnClick="SignupButton_Click"/>
                         </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -120,6 +129,7 @@
     <script src="vendor/datepicker/moment.min.js"></script>
     <script src="vendor/datepicker/daterangepicker.js"></script>
     <script src="js/global.js"></script>
+    </form>
 </body>
 </html>
 
