@@ -19,7 +19,10 @@ public partial class signup : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //If already logged in, go to profile.
+        if(LogStatus.IsLoggedIn()>0)
+        {
+            Response.Redirect("profile.aspx");
+        }
     }
 
     public string Hash(string password)

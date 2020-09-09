@@ -21,11 +21,14 @@ public partial class profile : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(LogStatus.IsLoggedIn()<=0)
+
+        LogStatus.DeleteCookies();
+
+        if (LogStatus.IsLoggedIn() <= 0)
         {
             Response.Redirect("home.aspx");
         }
-
+        
         SqlConnection conn = new SqlConnection(@"Data Source=(local)\sqlexpress;Initial Catalog=friendsforever;Integrated Security=True"); //Create Connection
 
         conn.Open();

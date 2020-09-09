@@ -24,6 +24,8 @@ public partial class otherprofiles : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        LogStatus.DeleteCookies();
+
         if (LogStatus.IsLoggedIn() <= 0)
         {
             Response.Redirect("home.aspx");

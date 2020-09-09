@@ -16,6 +16,8 @@ public partial class search : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        LogStatus.DeleteCookies();
+
         if(LogStatus.IsLoggedIn()<=0)
         {
             Response.Write("home.aspx");

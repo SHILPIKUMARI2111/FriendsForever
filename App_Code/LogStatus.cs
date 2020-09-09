@@ -68,6 +68,8 @@ public class LogStatus
 
     public static void Check_Token()
     {
+        bool set_user_id = false;
+
         SqlConnection conn = new SqlConnection(@"Data Source=(local)\sqlexpress;Initial Catalog=friendsforever;Integrated Security=True"); //Create Connection
 
         conn.Open();
@@ -81,9 +83,10 @@ public class LogStatus
             if(reader.Read())
             {
                 user_id = Convert.ToInt32(reader["user_id"].ToString());
+                set_user_id = true;
             }
 
-            if(user_id <0 || user_id == null)
+            if(user_id <=0 || user_id == null || !set_user_id)
             {
                 user_id = -1;
             }
@@ -113,6 +116,22 @@ public class LogStatus
         SNID_.Value = "1";
         SNID_.Expires = DateTime.Now.AddHours(168);
         HttpContext.Current.Response.Cookies.Add(SNID_);
+    }
+
+    public static void DeleteCookies()
+    {
+        Check_Token();
+
+        if(user_id<=0)
+        {
+            HttpCookie SNID = new HttpCookie("SNID");
+            SNID.Expires = DateTime.Now.AddHours(-1);
+            HttpContext.Current.Response.Cookies.Add(SNID);
+
+            HttpCookie SNID_ = new HttpCookie("SNID_");
+            SNID_.Expires = DateTime.Now.AddHours(-1);
+            HttpContext.Current.Response.Cookies.Add(SNID_);
+        }
     }
 
 }
