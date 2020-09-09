@@ -24,7 +24,10 @@ public partial class otherprofiles : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        LogStatus.DeleteCookies();
+        if (HttpContext.Current.Request.Cookies["SNID"] != null)
+        {
+            LogStatus.DeleteCookies();
+        }
 
         if (LogStatus.IsLoggedIn() <= 0)
         {

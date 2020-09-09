@@ -16,11 +16,14 @@ public partial class search : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        LogStatus.DeleteCookies();
+        if (HttpContext.Current.Request.Cookies["SNID"] != null)
+        {
+            LogStatus.DeleteCookies();
+        }
 
         if(LogStatus.IsLoggedIn()<=0)
         {
-            Response.Write("home.aspx");
+            Response.Redirect("home.aspx");
         }
 
         SqlConnection conn = new SqlConnection(@"Data Source=(local)\sqlexpress;Initial Catalog=friendsforever;Integrated Security=True"); //Create Connection
