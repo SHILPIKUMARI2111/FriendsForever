@@ -19,7 +19,8 @@
 	<div class="limiter">
 		<div class="container-login100">
 
-			<div class="lgtlinkposts">
+			<div class="lgtlinkfun">
+        <a href="funzone.aspx"><span class="userstext">FunZone</span></a>
         <a href="posts.aspx"><span class="userstext">Posts</span></a>
         <a href="search.aspx"><span class="userstext">Search</span></a>
 		<a href="logout.aspx"><span class="logouttext">Logout</span></a>

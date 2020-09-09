@@ -149,6 +149,15 @@ iframe {
   width: 300px;
 }
 
+
+.lgtlinkfun{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 420px;
+}
+
+
 .follow{
   position: relative;
   width: 150px;
@@ -224,6 +233,21 @@ iframe {
   padding: 50px 0px 0px 0px;
 }
 
+.game {
+  width: 960px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px 0px 0px 0px;
+}
+
 
 .login100-pic {
   height: 300px;
@@ -266,6 +290,20 @@ img {
   display: block;
   padding-bottom: 15px;
 }
+
+.funzone-title {
+  font-family: 'Luckiest Guy', cursive;
+  text-shadow: 2px 2px grey;
+  font-size: 60px;
+  color: #FF0059;
+
+  text-align: center;
+
+  width: 100%;
+  display: block;
+  padding-bottom: 15px;
+}
+
 .userslist
 {
     font-family: Poppins-Bold;
@@ -297,6 +335,29 @@ img {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.funzone-list{
+  width: 100%;
+  margin-top : 20px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+.funzone-text{
+  font-family: 'Frijole', cursive;
+  font-size: 45px;
+  text-shadow : 4px 4px grey;
+  color: #005DC0;
+
+  text-align: center;
+
+  width: 100%;
+  display: block;
+  padding-bottom: 15px;
 }
 
 .choose{
