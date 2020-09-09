@@ -23,7 +23,7 @@
         <a href="profile.aspx"><span class="userstext">Profile</span></a>
         <a href="search.aspx"><span class="userstext">Search</span></a>
 		<a href="logout.aspx"><span class="logouttext">Logout</span></a>
-			</div>
+	  </div>
 
 			<div class="wrap-login100">
         <span class="login100-form-title">Posting Wall</span>
@@ -38,17 +38,28 @@
 
           <span id="recentposts">Recent Posts</span>
 
-          <div class="posts">
-
+          
             <% for (int i = 0; i < count; i++)
                {
-                   Response.Write("<span id='p-uname'>" + u_names[i] + "</span><br/>");
-                   Response.Write("<span id='p-msg'>" + msgs[i] + "</span><br/>");
-                   Response.Write("<span id='p-dt'>" + "@" + datetimes[i] + "</span><br/>");
+                   if(u_names[i][0] == '*')
+                   {
+                       Response.Write("<div class='posts'>");
+                       Response.Write("<span id='p-uname'>" + u_names[i].Substring(1) + "</span><br/>");
+                       Response.Write("<span id='p-msg'>" + msgs[i] + "</span><br/>");
+                       Response.Write("<span id='p-dt'>" + "@" + datetimes[i] + "</span><br/>");
+                       Response.Write("</div>");
+                   }
+                   else
+                   {
+                       Response.Write("<div class='postsothers'>");
+                       Response.Write("<span id='p-unameothers'>" + u_names[i] + "</span><br/>");
+                       Response.Write("<span id='p-msg'>" + msgs[i] + "</span><br/>");
+                       Response.Write("<span id='p-dt'>" + "@" + datetimes[i] + "</span><br/>");
+                       Response.Write("</div>");
+                   }
                }
             %>
 
-          </div>
 			</div>
 		</div>
 	</div>

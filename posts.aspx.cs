@@ -32,7 +32,21 @@ public partial class posts : System.Web.UI.Page
 
         SqlConnection conn = new SqlConnection(@"Data Source=(local)\sqlexpress;Initial Catalog=friendsforever;Integrated Security=True"); //Create Connection
 
+        conn.Open();
 
+        using (SqlCommand command = new SqlCommand("SELECT u_name FROM users WHERE u_id=@u_id", conn))
+        {
+            command.Parameters.AddWithValue("@u_id", LogStatus.IsLoggedIn());
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                u_name = reader["u_name"].ToString();
+            }
+        }
+
+        conn.Close();
+        
         conn.Open();
 
         using (SqlCommand command = new SqlCommand("SELECT COUNT(m_id) AS count FROM messages", conn))
@@ -68,10 +82,18 @@ public partial class posts : System.Web.UI.Page
 
             while(reader.Read())
             {
-                u_names[i] = reader["u_name"].ToString();
-                msgs[i] = reader["msg"].ToString();
-                datetimes[i] = reader["datetime"].ToString();
-
+                if (reader["u_name"].ToString() == u_name)
+                {
+                    u_names[i] = "*"+reader["u_name"].ToString();
+                    msgs[i] = reader["msg"].ToString();
+                    datetimes[i] = reader["datetime"].ToString();
+                }
+                else
+                {
+                    u_names[i] = reader["u_name"].ToString();
+                    msgs[i] = reader["msg"].ToString();
+                    datetimes[i] = reader["datetime"].ToString();
+                }
                 i++;
             }
         }
