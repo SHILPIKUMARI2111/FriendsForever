@@ -32,7 +32,7 @@
                     <a class="funzone-text" href="spacecord.aspx">Space Cord</a>
                     <a class="funzone-text" href="triangle.aspx">Triangle</a>
                     <a class="funzone-text" href="jelly.aspx">Jelly</a>
-                    <a class="funzone-text" href="neondash.aspx">Neon Dash</a>
+                    <a class="funzone-text" href="piano.aspx">Piano</a>
                     <a class="funzone-text" href="basketball.aspx">Basketball</a>
                 </div>
 

@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="neondash.aspx.cs" Inherits="neondash" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="piano.aspx.cs" Inherits="piano" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Neon Dash</title>
+	<title>Piano</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,8 +26,8 @@
             </div>
 
 			<div class="game">
-                <span class="funzone-title">Neon Dash</span>
-                <iframe src="http://buxle.com/games2/geometry-neon-dash/index.html" scrolling="no" frameborder="no" width="1000" height="600" seamless="true" ></iframe>
+                <span class="funzone-title">Piano</span>
+                <iframe src="https://www.addictinggames.com/embed/html5-games/23664" scrolling="no" frameborder="no" width="1000" height="600" seamless="true" ></iframe>
 	        </div>
 		</div>
 	</div>
