@@ -22,7 +22,7 @@
 			<div class="lgtlinkposts">
         <a href="posts.aspx"><span class="userstext">Posts</span></a>
         <a href="search.aspx"><span class="userstext">Search</span></a>
-				<a href="logout.aspx"><span class="logouttext">Logout</span></a>
+		<a href="logout.aspx"><span class="logouttext">Logout</span></a>
 			</div>
 
 			<div class="wrap-login100">

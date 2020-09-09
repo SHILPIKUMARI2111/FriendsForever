@@ -138,8 +138,8 @@ iframe {
 .lgtlink{
   position: absolute;
   top: 20px;
-  right: 20px;
-  width: 200px;
+  right: 0px;
+  width: 320px;
 }
 
 .lgtlinkposts{

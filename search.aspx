@@ -18,10 +18,11 @@
 	<div class="limiter">
 		<div class="container-login100">
 
-      <div class="lgtlink">
-        <a href="profile.aspx"><span class="userstext">Profile</span></a>
-				<a href="logout.aspx"><span class="logouttext">Logout</span></a>
-			</div>
+            <div class="lgtlink">
+                <a href="profile.aspx"><span class="userstext">Profile</span></a>
+                <a href="posts.aspx"><span class="userstext">Posts</span></a>
+		        <a href="logout.aspx"><span class="logouttext">Logout</span></a>
+            </div>
 
 			<div class="wrap-login100">
         <span class="login100-form-title">Find Friends</span>

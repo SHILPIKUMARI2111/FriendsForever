@@ -115,6 +115,9 @@
                         <div class="col-4">
                             <asp:FileUpload ID="ProPic" runat="server" />
                         </div>
+                        <div class="col-3">
+                            <p class="label">(only .jpg)</p>
+                        </div>
                     </div>
 
                         <div class="p-t-15">
@@ -125,6 +128,7 @@
             </div>
         </div>
     </div>
+
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/datepicker/moment.min.js"></script>
     <script src="vendor/datepicker/daterangepicker.js"></script>
